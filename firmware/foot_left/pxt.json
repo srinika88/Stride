@@ -1,0 +1,14 @@
+{
+    "name": "foot_left",
+    "version": "0.0.0",
+    "description": "StrideIQ foot_left sensor node",
+    "dependencies": {
+        "core": "*",
+        "bluetooth": "github:microsoft/pxt-microbit-bluetooth",
+        "microphone": "*"
+    },
+    "files": [
+        "main.ts"
+    ],
+    "testFiles": []
+}

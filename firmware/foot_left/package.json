@@ -1,0 +1,14 @@
+{
+  "name": "foot-left-firmware",
+  "version": "1.0.0",
+  "private": true,
+  "description": "StrideIQ foot_left micro:bit firmware",
+  "scripts": {
+    "build": "pxt build",
+    "deploy": "pxt deploy",
+    "serve": "pxt serve"
+  },
+  "devDependencies": {
+    "pxt-microbit": "^9.1.1"
+  }
+}

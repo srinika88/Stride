@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+data/*.db
+data/sqlite/*.db
+data/waist_calibration.json
+node_modules/
+pxt_modules/
+built/
+.DS_Store
+*.egg-info/

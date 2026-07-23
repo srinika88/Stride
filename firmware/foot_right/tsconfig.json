@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "noImplicitAny": true,
+        "ignoreDeprecations": "6.0"
+    },
+    "exclude": [
+        "pxt_modules/**/*test.ts"
+    ]
+} 
