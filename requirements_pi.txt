@@ -1,0 +1,26 @@
+# StrideIQ -- Raspberry Pi requirements
+# CV (mediapipe) intentionally excluded -- runs on Mac instead, on
+# phone-recorded video. Pi only needs real-time sensing: BLE, DB,
+# MQTT, calibration, Ollama coaching.
+#
+# Because mediapipe is NOT installed here, there's no numpy<2
+# constraint to satisfy -- these are just the latest compatible
+# versions, no downgrades needed.
+
+numpy==2.5.0
+scipy==1.18.0
+pandas==3.0.3
+scikit-learn==1.9.0
+joblib==1.5.3
+
+bleak==3.0.2
+paho-mqtt==2.1.0
+Flask==3.1.3
+pydantic==2.13.4
+
+langchain-core==1.4.8
+langchain-ollama
+
+streamlit==1.59.2
+
+pytest
