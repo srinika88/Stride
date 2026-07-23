@@ -51,6 +51,13 @@ logger = logging.getLogger("strideiq.gait")
 
 WINDOW_SECONDS = 5.0
 
+# How often backend/main.py's analysis loop wakes up and calls
+# analyzer.analyze() — separate from WINDOW_SECONDS (how much data each
+# analysis looks at). main.py imports this expecting a "runs every 1
+# second" cadence per its own docstring, but this constant didn't exist
+# here at all — added to match that documented intent.
+ANALYSIS_INTERVAL_SEC = 1.0
+
 SAMPLE_RATE_HZ = 50
 
 # micro:bit acceleration is mg
@@ -638,4 +645,4 @@ class GaitAnalyzer:
 
         if self.on_feedback:
 
-            self.on_feedback(feedback)
+            self.on_feedback(feedback) 

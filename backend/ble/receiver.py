@@ -74,7 +74,17 @@ FOOT_DEVICES = {
     },
     "R": {
         "name": config.BLE_DEVICE_NAMES["foot_right"],
-        "address": None
+        # Hardcoded — this board's name doesn't reliably appear in scan
+        # results (BLE splits advertising data across an ADV packet and
+        # a separate scan-response packet; a scan sometimes only catches
+        # one of the two, especially in a room with lots of other BLE
+        # traffic). Confirmed via a longer 20s scan showing the same
+        # MAC consistently advertising the Nordic UART Service UUID
+        # right next to the Left board (RSSI=-36, closest match in the
+        # room) — this is genuinely the right foot micro:bit, name
+        # resolution just isn't reliable for it. address takes priority
+        # over name in find_device(), so this skips scanning entirely.
+        "address": "E0:5A:1B:5F:64:E6"
     }
 }
 
